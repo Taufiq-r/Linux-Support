@@ -35,6 +35,11 @@ sudo nano /etc/samba/smb.conf
         #set persmission 777 when folder created
         force directory mode = 777
 ```
+* allow firewall
+  ```
+  firewall-cmd --add-service=samba
+  firewall-cmd --runtime-to-permanent
+  ```
 *run samba
 ```
 sudo systemctl enable smb.service
