@@ -94,13 +94,11 @@ sudo systemctl status smb.service
 * Run
 *  ```
    yt-dlp \
-  --cookies ~/Your PATH/cookies.txt \
-  --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" \
-  --referer "https://www.udemy.com" \
-  --write-auto-sub \
-  --sub-lang en \
-  --convert-subs srt \
-  "https://www.udemy.com/course/Name Course"
-  ```
-
-
+          --cookies ~/Your PATH/cookies.txt \
+          --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" \
+          --referer "https://www.udemy.com" \
+          --write-auto-sub \
+          --sub-lang en \
+          --convert-subs srt \
+          "https://www.udemy.com/course/Name Course"
+   ```
