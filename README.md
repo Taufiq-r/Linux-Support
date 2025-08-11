@@ -10,15 +10,15 @@
 ```
 sudo dnf install samba
 ```
-*set samba password
+* set samba password
 ```
 sudo smbpasswd -a
 ```
-*setting samba config
+* setting samba config
 ```
 sudo nano /etc/samba/smb.conf
 ```
-*add this at end line
+* add this at end line
 ```
 [Share]
 
@@ -40,7 +40,7 @@ sudo nano /etc/samba/smb.conf
   firewall-cmd --add-service=samba
   firewall-cmd --runtime-to-permanent
   ```
-*run samba
+* run samba
 ```
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
