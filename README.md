@@ -7,20 +7,20 @@
 ## Sharing File with Windows using Samba
 
 * install samba on fedora
-```
-sudo dnf install samba
-```
+* ```
+  sudo dnf install samba
+  ```
 * set samba password
-```
-sudo smbpasswd -a
-```
+* ```
+  sudo smbpasswd -a
+  ```
 * setting samba config
-```
-sudo nano /etc/samba/smb.conf
-```
+* ```
+  sudo nano /etc/samba/smb.conf
+  ```
 * add this at end line
-```
-[Share]
+* ```
+  [Share]
 
         #specify shared directory
         path = /home/taufiq-r/share
@@ -34,7 +34,7 @@ sudo nano /etc/samba/smb.conf
         force create mode = 777
         #set persmission 777 when folder created
         force directory mode = 777
-```
+ ```
 * allow firewall
   ```
   firewall-cmd --add-service=samba
@@ -52,18 +52,18 @@ sudo systemctl status smb.service
 ## Install Discord from flatpak
 
 * add repository if not exist
-  ```
-  sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  ```
+  * ```
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
 * Install flatpak
-  ```
-  sudo dnf install flatpak -y
-  ```
+  * ```
+     sudo dnf install flatpak -y
+    ```
 * Install discord
-  ```
-  flatpak install flathub com.discordapp.Discord -y
+  * ```
+    flatpak install flathub com.discordapp.Discord -y
 
-  ```
+    ```
 ## Install yt-dlp for download udemy course 
 * INSTALL WITHOUT VENV
 * ```
