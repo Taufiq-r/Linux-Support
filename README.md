@@ -2,7 +2,6 @@
 
 ## Update 
 * `sudo dnf -y update`
-* 
 
 ## Sharing File with Windows using Samba
 
@@ -36,17 +35,16 @@
         force directory mode = 777
  ```
 * allow firewall
-  ```
-  firewall-cmd --add-service=samba
-  firewall-cmd --runtime-to-permanent
-  ```
+  * ```
+     firewall-cmd --add-service=samba
+     firewall-cmd --runtime-to-permanent
+    ```
 * run samba
-```
-sudo systemctl enable smb.service
-sudo systemctl start smb.service
-sudo systemctl status smb.service
-
-```
+* ```
+  sudo systemctl enable smb.service
+  sudo systemctl start smb.service
+  sudo systemctl status smb.service
+  ```
 * make sure has setting network on linux match with windows
 
 ## Install Discord from flatpak
