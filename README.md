@@ -33,7 +33,7 @@
         force create mode = 777
         #set persmission 777 when folder created
         force directory mode = 777
- ```
+  ```
 * allow firewall
   * ```
      firewall-cmd --add-service=samba
