@@ -3,6 +3,21 @@
 ## Update 
 * `sudo dnf -y update`
 
+## Install GNome Tweak + Extension
+* ```
+  sudo dnf install gnome-tweaks
+  ```
+# Instal ekstensi GNOME untuk mengelola tema
+* ```
+  sudo dnf install gnome-extensions-app
+  ```
+* ```
+  sudo dnf install gnome-shell-extension-user-theme
+  ```
+* Search theme on terminal
+* ```
+  dnf search gtk | grep theme
+  ```
 ## Sharing File with Windows using Samba
 
 * install samba on fedora
