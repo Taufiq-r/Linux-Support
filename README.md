@@ -1,7 +1,9 @@
 # Linux-FEDORA42-Software/Tools Installation Source
 
 ## Update 
-* `sudo dnf -y update`
+* ```
+  sudo dnf -y update
+  ``` 
 
 ## Install GNome Tweak + Extension
 * ```
