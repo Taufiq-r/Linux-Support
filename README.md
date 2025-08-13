@@ -3,7 +3,11 @@
 ## Update 
 * ```
   sudo dnf -y update
-  ``` 
+  ```
+* Install DNF Utillities  
+* ```
+  sudo dnf install -y dnf-plugins-core 'dnf-command(config-manager)'
+  ```
 
 ## Install GNome Tweak + Extension
 * ```
@@ -20,6 +24,68 @@
 * ```
   dnf search gtk | grep theme
   ```
+
+## Install Docker
+* Create Docker repo configuration file on DNF
+* ```
+  sudo nano /etc/yum.repos.d/docker-ce.repo
+  ```
+* Add this
+* ```
+  [docker-ce-stable]
+  name=Docker CE Stable - $basearch
+  baseurl=https://download.docker.com/linux/fedora/42/$basearch/stable
+  enabled=1
+  gpgcheck=1
+  gpgkey=https://download.docker.com/linux/fedora/gpg
+  ```
+* Install Docker
+* ```
+  sudo dnf install -y docker-ce docker-ce-cli containerd.io
+  ```
+* Enable and Run Docker
+* ```
+  sudo systemctl start docker
+  sudo systemctl enable docker
+  ```
+* (optional) add usergroup docker
+* ```
+  sudo usermod -aG docker 'user'
+  ```
+* ```
+  newgrp docker
+  ```
+* Install Gitlab *FEDORA-42*
+* Create Gitlab folder
+* ```
+  sudo mkdir -p /srv/gitlab/config /srv/gitlab/logs /srv/gitlab/data
+  sudo chmod -R 777 /srv/gitlab/
+  ```
+* run this
+* ```
+  docker run --detach \
+  --hostname gitlab.'xyz'.com \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume /srv/gitlab/config:/etc/gitlab \
+  --volume /srv/gitlab/logs:/var/log/gitlab \
+  --volume /srv/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+  ```
+* edit host config
+* ```
+  sudo nano /etc/hosts
+  ```
+* add this at end line
+* ```
+  127.0.0.1       gitlab.'xyz'.com
+  ```
+* get password for login gitlab as root
+* ```
+  sudo docker exec gitlab grep 'Password:' /etc/gitlab/initial_root_password
+  ``` 
+  
 ## Sharing File with Windows using Samba
 
 * install samba on fedora
