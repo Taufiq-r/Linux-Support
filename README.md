@@ -1,6 +1,6 @@
 # Linux-FEDORA42-Software/Tools Installation Source
 
-## Update 
+* Update 
 * ```
   sudo dnf -y update
   ```
@@ -215,3 +215,18 @@
 * search font like times new roman, arial etc
 * check LibreOffice
 * Done
+
+## Flash MIUI Fastboot ROM via terminal
+* Install Android-tools
+* ```
+  sudo dnf install android-tools
+  ```
+* extract Miui ROM, you can find any Fastboot ROM at https://xmfirmwareupdater.com
+* ```
+  tar -xzvf 'ROM_Name'.tgz
+  ```
+* move to ROM Folder
+* ```
+  cd 'ROM_Name'
+  ```
+* 
