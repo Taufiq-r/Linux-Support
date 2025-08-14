@@ -13,7 +13,7 @@
 * ```
   sudo dnf install gnome-tweaks
   ```
-# Instal ekstensi GNOME untuk mengelola tema
+# Instal extensions for customize GNOME Theme
 * ```
   sudo dnf install gnome-extensions-app
   ```
