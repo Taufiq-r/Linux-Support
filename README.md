@@ -24,6 +24,16 @@
 * ```
   dnf search gtk | grep theme
   ```
+## Enable right click mouse / touchpad
+* Enable right click
+* ```
+  gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+  ```
+* Default
+* ```
+  gsettings set org.gnome.desktop.peripherals.touchpad click-method 'fingers'
+  ```
+  
 
 ## Install Docker
 * Create Docker repo configuration file on DNF
