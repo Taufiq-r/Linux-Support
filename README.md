@@ -73,7 +73,7 @@
 * ```
   newgrp docker
   ```
-* Install Gitlab *FEDORA-42*
+## Install Gitlab *FEDORA-42*
 * Create Gitlab folder
 * ```
   sudo mkdir -p /srv/gitlab/config /srv/gitlab/logs /srv/gitlab/data
