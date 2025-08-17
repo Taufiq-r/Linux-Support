@@ -8,7 +8,15 @@
 * ```
   sudo dnf install -y dnf-plugins-core 'dnf-command(config-manager)'
   ```
-
+## Reset forgot su password
+* Reboot and enter grub menu by press 'e' and select first Fedora Linux workstation
+* add ``` init=/bin/bash ``` after line rhgb quiet -> example: ``` rhgb quiet init=/bin/bash
+* press ctrl + x
+* type ``` passwd ``` when bash terminal appear and type your new su password
+* type ``` touch /.autorelabel
+* type ``` exec /sbin/init
+* note: if error passwd: "authentication token manipulation error" try to remount root partition by type this ``` sudo mount -o remount, rw / ``` and try passwd again.
+  
 ## Install GNome Tweak + Extension
 * ```
   sudo dnf install gnome-tweaks
@@ -213,11 +221,11 @@
 
 * Install Microsoft Fonts via msttcore-fonts-installer
 
-* Before installing Microsoft Fonts, you must ensure the necessary tools are on your system. These tools include curl for downloading files, cabextract for extracting Microsoft font files, and fontconfig for managing and customizing font access. Most Fedora installations will have these by default, but it’s good practice to check and install any missing ones.
+* Before installing Microsoft Fonts, install cabextract for extracting Microsoft font files, and fontconfig for managing and customizing font access. Most Fedora installations will have these by default, but it’s good practice to check and install any missing ones.
 * ```
   sudo dnf install curl cabextract xorg-x11-font-utils fontconfig
   ```
-* Once the prerequisites are in place, proceed to download and install the Microsoft Core Fonts package using the following command:
+* Proceed to download and install the Microsoft Core Fonts package using the following command:
 * ```
   sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
   ```
