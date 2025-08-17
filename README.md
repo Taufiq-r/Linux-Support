@@ -221,7 +221,7 @@
 
 * Install Microsoft Fonts via msttcore-fonts-installer
 
-* Before installing Microsoft Fonts, install cabextract for extracting Microsoft font files, and fontconfig for managing and customizing font access. Most Fedora installations will have these by default, but it’s good practice to check and install any missing ones.
+* Install cabextract for extracting Microsoft font files, and fontconfig for managing and customizing font access. Most Fedora installations will have these by default, but it’s good practice to check and install any missing ones.
 * ```
   sudo dnf install curl cabextract xorg-x11-font-utils fontconfig
   ```
