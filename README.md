@@ -10,7 +10,7 @@
   ```
 ## Reset forgot su password
 * Reboot and enter grub menu by press 'e' and select first Fedora Linux workstation
-* add ``` init=/bin/bash ``` after line rhgb quiet -> example: ``` rhgb quiet init=/bin/bash
+* add ``` init=/bin/bash ``` after line rhgb quiet -> example: ``` rhgb quiet init=/bin/bash ```
 * press ctrl + x
 * type ``` passwd ``` when bash terminal appear and type your new su password
 * type ``` touch /.autorelabel ```
