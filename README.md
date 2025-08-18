@@ -148,6 +148,12 @@
   ```
 * make sure has setting network on linux match with windows
 
+## Install Discord
+* add RPM Fusion Repository
+* ```sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm```
+* ```sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm```
+* Install Discord via Terminal by type ``` sudo dnf install discord ```
+  OR
 ## Install Discord from flatpak
 
 * add repository if not exist
