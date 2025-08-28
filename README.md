@@ -8,6 +8,44 @@
 * ```
   sudo dnf install -y dnf-plugins-core 'dnf-command(config-manager)'
   ```
+
+## Add GPG & SSH Key
+## GPG
+* Create new GPG Key
+* ``` gpg --full-generate-key ```
+* Select what kind of key you want:
+   (1) RSA and RSA
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (9) ECC (sign and encrypt) *default*
+  (10) ECC (sign only)
+  (14) Existing key from card
+* Choose bits long *Recomend 4096
+* specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+* GnuPG needs to construct a user ID to identify your key.
+* Enter your name, email, and Comment (optional)
+* Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?
+* Enter passphrase
+* ``` gpg --list-secret-keys --keyid-format=long ``` for see created GPG Keys 
+* ``` taufiq-r@fedora:~$ gpg --armor --export 'your id' ``` for export your GPG Key 'your id'
+* Done
+## SSH
+* Create new SSH Key
+* ssh-keygen -t rsa -b 4096 -C 'your email'
+* Enter file in which to save the key by default (/home/taufiq-r/.ssh/id_rsa) and press Enter
+* You can add passphrase when prompted, Enter passphrase for "/home/taufiq-r/.ssh/id_rsa" (empty for no passphrase)
+* Enter same passphrase again:
+* Your identification has been saved in /home/taufiq-r/.ssh/id_rsa
+* Your public key has been saved in /home/taufiq-r/.ssh/id_rsa.pub
+* for view your SSH Key type ``` cat ~/.ssh/id_rsa.pub``` and you will see the SSH Key you have created 
+
+
 ## Reset forgot su password
 * Reboot and enter grub menu by press 'e' and select first Fedora Linux workstation
 * add ``` init=/bin/bash ``` after line rhgb quiet -> example: ``` rhgb quiet init=/bin/bash ```
